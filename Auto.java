@@ -9,7 +9,6 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -84,7 +83,7 @@ public class Auto implements ActionListener{
             button[i] = new JButton();
             button[i].addActionListener(this);
             button[i].setFocusable(false);
-            button[i].setFont(new Font("MV Boli", Font.PLAIN, 300));
+            button[i].setFont(new Font("MV Boli", Font.PLAIN, 200));
             button[i].setBackground(Color.white);
             
         }
@@ -170,7 +169,6 @@ public class Auto implements ActionListener{
                 }
     
             }
-            
             else {
                 for (int i = 0; i < 3; i++) {
                     for (int j = 0; j < 3; j++) {
@@ -185,6 +183,7 @@ public class Auto implements ActionListener{
                         }
                     }
                 }
+                
                 if (b) { 
                     for (int i = 0; i < 3; i++) {
                         for (int j = 0; j < 3; j++) {
@@ -209,12 +208,12 @@ public class Auto implements ActionListener{
                             button[(4 * i + 8) % 12].setForeground(Color.blue);
                             B[l] = (4 * i + 8) % 12;
                             l++;
-                            b= false;
+                            b = false;
                             break;
                         }
                     }
                 }
-        
+
                 if (b && t[2] == t[6] && t[2] == 0 && t[4] == -1) {
                     t[4] = 0;
                     button[4].setText("O");
@@ -222,7 +221,7 @@ public class Auto implements ActionListener{
                     B[l] = 4;
                     l++;
                     b = false;
-    
+                    
                 }
     
                 if (b && t[2] == t[4] && t[2] == 0 && t[6] == -1) {
@@ -242,7 +241,6 @@ public class Auto implements ActionListener{
                     l++;
                     b = false;
                 }
-
 
                 if(b) {
                     for (int i = 0; i < 3; i++) {
@@ -335,6 +333,40 @@ public class Auto implements ActionListener{
                     }
                 }
                 if (b) {
+                    if (t[1] == t[3] && t[1] == 1 && t[0] == -1) {
+                        button[0].setText("O");
+                        button[0].setForeground(Color.blue);
+                        t[0] = 0;
+                        B[l] = 0;
+                        l++;
+                        b = false;
+                    }
+                    else if (t[1] == t[5] && t[5] == 1 && t[2] == -1) {
+                        button[2].setText("O");
+                        button[2].setForeground(Color.blue);
+                        t[2] = 0;
+                        B[l] = 2;
+                        l++;
+                        b = false;
+                    }
+                    else if (t[7] == t[5] && t[7] == 1 && t[8] == -1) {
+                        button[8].setText("O");
+                        button[8].setForeground(Color.blue);
+                        t[8] = 0;
+                        B[l] = 8;
+                        l++;
+                        b = false;
+                    }
+                    else if (t[3] == t[7] && t[3] == 1 && t[6] == -1) {
+                        button[6].setText("O");
+                        button[6].setForeground(Color.blue);
+                        t[6] = 0;
+                        B[l] = 6;
+                        l++;
+                        b = false;
+                    }
+                }
+                if (b) {
                     if (m < 3) {
                         if (t[(m + 1) % 3] == -1) {
                             button[(m + 1) % 3].setText("O");
@@ -375,7 +407,7 @@ public class Auto implements ActionListener{
                         
                     }
 
-                    else if (m < 9) {
+                    else {
                         if (t[6 + (m + 1) % 3] == -1) {
                             button[6 + (m + 1) % 3].setText("O");
                             button[6 + (m + 1) % 3].setForeground(Color.blue);
