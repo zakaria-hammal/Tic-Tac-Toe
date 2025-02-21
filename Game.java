@@ -9,7 +9,6 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -80,7 +79,7 @@ public class Game implements ActionListener{
             button[i] = new JButton();
             button[i].addActionListener(this);
             button[i].setFocusable(false);
-            button[i].setFont(new Font("MV Boli", Font.PLAIN, 300));
+            button[i].setFont(new Font("MV Boli", Font.PLAIN, 250));
             button[i].setBackground(Color.white);
             
         }
@@ -103,7 +102,7 @@ public class Game implements ActionListener{
         frame.add(panel1, BorderLayout.NORTH);
         frame.add(panel2, BorderLayout.SOUTH);
 
-        frame.setSize(750, 900);
+        frame.setSize(750, 938);
         frame.setLayout(null);
         frame.setVisible(true);
     }

@@ -7,7 +7,6 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -54,7 +53,7 @@ public class Menu implements ActionListener{
         frame.add(panel2);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(750, 900);
+        frame.setSize(750, 938);
         frame.setLayout(null);
         frame.setVisible(true);
     }
