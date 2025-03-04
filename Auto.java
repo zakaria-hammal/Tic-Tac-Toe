@@ -241,7 +241,7 @@ public class Auto implements ActionListener{
                     l++;
                     b = false;
                 }
-
+                    
                 if(b) {
                     for (int i = 0; i < 3; i++) {
                         for (int j = 0; j < 3; j++) {
@@ -328,6 +328,72 @@ public class Auto implements ActionListener{
                         button[3].setForeground(Color.blue);
                         t[3] = 0;
                         B[l] = 3;
+                        l++;
+                        b = false;
+                    }
+                }
+                if (b) {
+                    if(t[1] == t[8] && t[1] == 1 && t[2] == -1) {
+                        button[2].setText("O");
+                        button[2].setForeground(Color.blue);
+                        t[2] = 0;
+                        B[l] = 2;
+                        l++;
+                        b = false;
+                    }
+                    else if(t[1] == t[6] && t[1] == 1 && t[0] == -1) {
+                        button[0].setText("O");
+                        button[0].setForeground(Color.blue);
+                        t[0] = 0;
+                        B[l] = 0;
+                        l++;
+                        b = false;
+                    }
+                    else if(t[5] == t[6] && t[5] == 1 && t[8] == -1) {
+                        button[8].setText("O");
+                        button[8].setForeground(Color.blue);
+                        t[8] = 0;
+                        B[l] = 8;
+                        l++;
+                        b = false;
+                    }
+                    else if(t[5] == t[0] && t[5] == 1 && t[2] == -1) {
+                        button[2].setText("O");
+                        button[2].setForeground(Color.blue);
+                        t[2] = 0;
+                        B[l] = 2;
+                        l++;
+                        b = false;
+                    }
+                    else if(t[7] == t[0] && t[7] == 1 && t[6] == -1) {
+                        button[6].setText("O");
+                        button[6].setForeground(Color.blue);
+                        t[6] = 0;
+                        B[l] = 6;
+                        l++;
+                        b = false;
+                    }
+                    else if(t[7] == t[2] && t[7] == 1 && t[8] == -1) {
+                        button[8].setText("O");
+                        button[8].setForeground(Color.blue);
+                        t[8] = 0;
+                        B[l] = 8;
+                        l++;
+                        b = false;
+                    }
+                    else if(t[3] == t[2] && t[4] == 1 && t[0] == -1) {
+                        button[0].setText("O");
+                        button[0].setForeground(Color.blue);
+                        t[0] = 0;
+                        B[l] = 0;
+                        l++;
+                        b = false;
+                    }
+                    else if(t[3] == t[8] && t[4] == 1 && t[6] == -1) {
+                        button[6].setText("O");
+                        button[6].setForeground(Color.blue);
+                        t[6] = 0;
+                        B[l] = 6;
                         l++;
                         b = false;
                     }
